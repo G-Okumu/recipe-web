@@ -17,6 +17,7 @@ const FooterLinks = [
 let first_footer_section = document.getElementById("first-footer-links");
 let second_footer_section = document.getElementById("second-footer-links");
 let third_footer_section = document.getElementById("third-footer-links");
+let copyright = document.getElementById("date");
 
 first_footer_section.innerHTML = `
 ${FooterLinks.slice(0, 4).map((item) => {
@@ -35,3 +36,5 @@ ${FooterLinks.slice(8, 12).map((item) => {
     return `<span class="text-white poppins" key=${item.id}>${item.text}</span>`;
 })}
 `
+
+copyright.textContent = `copyright ${new Date().getFullYear()}`;
