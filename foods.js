@@ -1,3 +1,6 @@
+console.log(process.env.API_KEY); // Works in the browser after build
+
+
 const foodContainer = document.getElementById("foodContainer");
 
 async function fetch_recipes() {
@@ -6,7 +9,7 @@ async function fetch_recipes() {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
-            'X-Api-Key': 'your_api_key',
+            'X-Api-Key': `${process.env.API_KEY}`,
         }
     }).then(resp => resp.json())
         .then((data) => renderFoods(data))
