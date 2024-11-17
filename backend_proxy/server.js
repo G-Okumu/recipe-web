@@ -1,6 +1,10 @@
 const dotenv = require('dotenv').config();
 const express = require('express');
 const app = express();
+const cors = require("cors");
+
+// Enable CORS for all routes (default)
+app.use(cors()); 
 
 const API_KEY = process.env.API_KEY;
 
