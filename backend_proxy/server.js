@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 
 // Enable CORS for all routes (default)
-app.use(cors()); 
+app.use(cors());
 
 const API_KEY = process.env.API_KEY;
 
@@ -13,7 +13,8 @@ app.get("/", (req, res) => res.send("Welcome to Jillian's Recipe api."));
 
 app.get('/api/get-data', async (req, res) => {
   try {
-    const response = await fetch('https://api.api-ninjas.com/v1/recipe?query=meat', {
+    const searchTerm = req.query.query;
+    const response = await fetch(`https://api.api-ninjas.com/v1/recipe?query=${searchTerm}`, {
       headers: {
         'X-Api-Key': API_KEY,
       }
