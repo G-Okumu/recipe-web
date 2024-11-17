@@ -1,22 +1,4 @@
-console.log(process.env.API_KEY); // Works in the browser after build
-
-
 const foodContainer = document.getElementById("foodContainer");
-
-async function fetch_recipes() {
-
-    await fetch("https://api.api-ninjas.com/v1/recipe?query=meat", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            'X-Api-Key': `${process.env.API_KEY}`,
-        }
-    }).then(resp => resp.json())
-        .then((data) => renderFoods(data))
-
-}
-
-
 
 
 function renderFoods(data) {
@@ -57,5 +39,15 @@ function handleDetails(button) {
 }
 
 
+async function fetch_recipes(search_term) {
+    // 
+    await fetch(`https://recipe-web-lyart.vercel.app/api/get-data?query=${search_term}`, {
+    }).then(resp => resp.json())
+        .then((data) => renderFoods(data))
 
-fetch_recipes();
+}
+
+document.getElementById("search").addEventListener("click", () => {
+    let search_term  = document.getElementById("search-term").value.trim("");
+    fetch_recipes(search_term);
+})
