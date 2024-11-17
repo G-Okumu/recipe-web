@@ -14,7 +14,6 @@ app.get('/api/get-data', async (req, res) => {
         'X-Api-Key': API_KEY,
       }
     });
-
     const data = await response.json();
     res.json(data);
   } catch (error) {
