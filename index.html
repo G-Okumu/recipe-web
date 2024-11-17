@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./index.css">
 
-    <title>Lucky Jillian Recipe</title>
+        <title>Lucky Jillian Recipe</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="./footer.js"></script>
-    <script defer src="./foods.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="./footer.js"></script>
+        <script defer src="./foods.js"></script>
 
 </head>
 
@@ -20,19 +20,49 @@
     <!-- Banner section -->
     <section class="header-banner h-96 w-full bg-yellow-50">
         <div class="flex flex-col items-center justify-center h-full">
-            <h1 class="text-center text-3xl md:text-4xl lg:text-5xl poppins font-semibold text-gray-700">Best instructions for you.</h1>
+            <h1 class="text-center text-3xl md:text-4xl lg:text-5xl poppins font-semibold text-gray-700">Jillian's
+                Recipe</h1>
+            <span class="poppins">Exceptional cooking instructions for you.</span>
 
-            <div class="rounded-full p-1 box-border mt-8 bg-white overflow-hidden ring-red-300 focus:ring-4 w-96 flex items-center">
-                <input type="text" id="search-term" value="" class=" rounded-full px-4 focus:outline-none w-full bg-transparent" placeholder="Search recipe here ......." />
-                <button id="search" class="text-sm bg-primary py-3 px-6 rounded-full text-white poppins ring-red-300 focus:ring-4 transition duration-300 hover:scale-105 transform">Search</button>
+            <div
+                class="rounded-full p-1 box-border mt-8 bg-white overflow-hidden ring-red-300 focus:ring-4 w-96 flex items-center">
+                <input type="text" id="search-term" value=""
+                    class=" rounded-full px-4 focus:outline-none w-full bg-transparent"
+                    placeholder="Enter meal to view recipe ......." />
+                <button id="search"
+                    class="text-sm bg-primary py-3 px-6 rounded-full text-white poppins ring-red-300 focus:ring-4 transition duration-300 hover:scale-105 transform">Search</button>
             </div>
         </div>
     </section>
 
-    <section class="my-12 max-w-screen-xl mx-auto px-6">      
+    <section class="my-12 max-w-screen-xl mx-auto px-6">
         <!-- All Foods -->
-        <div id="foodContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10"></div>
-      </section>
+        <div id="foodContainer" class="grid grid-cols-1 relative md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+        </div>
+
+        <div id="not-found"
+            class="poppins :px-24 lg:py-24 md:py-20 md:px-44 hidden px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16">
+            <div class="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">
+                <div class="relative">
+                    <div class="absolute">
+                        <div class="">
+                            <h1 class="my-2 text-gray-800 font-bold text-2xl">
+                                Looks like you've found the
+                                doorway to the great nothing
+                            </h1>
+                            <p class="my-2 text-gray-800">Sorry about that! Please search another recipe</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.ibb.co/ck1SGFJ/Group.png" />
+            </div>
+        </div>
+    </section>
 
 
 
@@ -60,7 +90,7 @@
                 <div class="flex flex-grow">
                     <span class="poppins text-gray-500">Developed by 💗 George Okumu</span>
                 </div>
-    
+
                 <div class="flex justify-end items-center space-x-6">
                     <span class="poppins text-white cursor-pointer">Privacy Policy</span>
                     <span class="poppins text-white cursor-pointer">Terms of Use</span>
